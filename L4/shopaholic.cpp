@@ -15,10 +15,10 @@ using ld = long double;
 const ld pi = acos(-1);
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
-    cout << fixed << setprecision(9);
+   
     
-    int n, r;
+    int n;
+    ll r;
     r=0;
     cin >> n;
 
@@ -34,7 +34,7 @@ int main() {
 
 
     while(lista1.size()>=3){
-        vector <int> aux(3);
+        vector <int> aux ={0,0,0};
         for (int i=0;i<3;i++){
             aux[i]=lista1.back();
             lista1.pop_back();
