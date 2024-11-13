@@ -42,6 +42,7 @@ int main() {
             for(int j=0;j<capacidad;j++){
                 matriz[i][j]=-1;
             }
+        }
         
 
     }
