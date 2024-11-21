@@ -9,15 +9,19 @@ const ll mod = 1e9 + 7;
 const ll inf = 1e12;
 const ld pi = acos(-1);
 
-string recursion(string actual,string restantes,int n){
-    if(size(actual)==n){
-        return actual;
+set <string> salida;
+
+void recursion(string actual,string restantes,int n){
+    if(restantes.length()==0){
+        salida.insert(actual);
+        return;
     }
 
-    actual+=restantes[0];
-    auto resultado= recursion(actual,restantes.substr(1,size(restantes)),n);
 
-    return resultado;
+    for(int i=0;i<int(size(restantes));i++){
+        recursion(actual+restantes[i],restantes.substr(0,i)+restantes.substr(i+1),n); 
+    }
+   
 }
 
 int main() {
@@ -26,13 +30,17 @@ int main() {
 
     string input;
     cin >> input;
-    int contador=0;
     list <string> lista;
 
-    int n=size(input)-1;
+    int n=size(input);
+    string vacio="";
+    recursion(vacio,input,n);
+    
+    cout << salida.size() << endl;
+    for(auto o :salida){
 
-    if()
-    cout << recursion()
+        cout << o << endl;
+    }
 
 
     return 0;

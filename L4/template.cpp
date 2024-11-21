@@ -1,9 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <vector>
-#include <algorithm>
-#include <limits>
+#include <bits/stdc++.h>
 
 using namespace std;
 
