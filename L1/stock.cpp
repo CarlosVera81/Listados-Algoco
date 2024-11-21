@@ -19,6 +19,7 @@ int main() {
     cin >> n;
     
     for(int i=0;i<n;i++){
+        
         int k;
         cin >> k;
         string linea;
@@ -71,8 +72,8 @@ int main() {
                 venta[valores[1]]+=valores[0];
             }
 
-            if(!compra.empty() and !venta.empty()){
-                if(compra.begin()->first >= venta.begin()->first){
+            while (!compra.empty() && !venta.empty() &&
+                   compra.begin()->first >= venta.begin()->first) {
                     int key1=compra.begin()->first;
                     int valor1=compra.begin()->second;
                     int key2=venta.begin()->first;
@@ -91,8 +92,8 @@ int main() {
                         compra.erase(key1);
                         last=key2;
                     }
-                }
             }
+            
 
             string salida="";
 
