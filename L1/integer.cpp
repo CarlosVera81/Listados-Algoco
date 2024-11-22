@@ -44,7 +44,6 @@ int main() {
                     num.clear();
                 }
             }
-
             int flag=0;
             int reversa=0;
             for(int i=0;i<int(op.length());i++){
@@ -71,8 +70,6 @@ int main() {
                     }
                 }
             }
-
-
             if(lista.empty() and flag==0){
                 cout << "[]" << endl;
             }else {
@@ -93,8 +90,6 @@ int main() {
                     cout << "]" << endl;
                 }
             }
-
-
         }
         else {
             int flag=0;
@@ -110,11 +105,15 @@ int main() {
                 cout << "error"<< endl;
             }
 
-
         }
     }
-        
     return 0;
+
+
+    
+
+
+
 }
 
 

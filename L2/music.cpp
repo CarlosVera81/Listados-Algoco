@@ -68,6 +68,8 @@ int main() {
             }
         }
 
+
+        
         stable_sort(canciones2.begin(),canciones2.end(),[indice](const vector<string>& a,const vector<string>& b){
             return a[indice] < b [indice];
         });

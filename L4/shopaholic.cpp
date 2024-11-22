@@ -29,7 +29,6 @@ int main() {
     }
 
     
-
     sort(lista1.begin(), lista1.end());
 
 

@@ -10,9 +10,9 @@ const ll inf = 1e12;
 const ld pi = acos(-1);
 
 int main() {
-  ios::sync_with_stdio(0); cin.tie(0);
-  cout << fixed << setprecision(9);
+    ios::sync_with_stdio(0); cin.tie(0);
+    cout << fixed << setprecision(9);
 
 
-  return 0;
+    return 0;
 }
