@@ -26,12 +26,15 @@ int calc(vector<int> v1, vector<int> v2) {
         }
 
         if(broken) break;
-
+      
         worst = max(worst, p1+p2);
 
+        
         int m = min(v1[p1], v2[p2]);
+       
         v1[p1] -= m;
         v2[p2] -= m;
+    
     }
 
     return worst;

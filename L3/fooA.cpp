@@ -1,75 +1,60 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+// Límite de precomputación
+const int LIMITE = 100;
+vector<int> primos;
+vector<bool> es_primo(LIMITE + 1, true);
+set<int> posiciones_perdedoras;
 
-string juego(string jugador, int tamano,vector<bool> primos){
-
-    if (tamano==1 or tamano==2){
-        return jugador;
-    
-    } else{
-
-        for(int i=0;i<tamano;i++){
-            if(primos[i]){
-                int temp=tamano-i;
-                for (int j=0;j<temp;j++){
-                    if(primos[j]){
-                        if(temp-j)
-                    }
-
-                }
-            }
-
-        }
-
-    }
-
-   
-}
-
-
-vector<bool> criba(int n){
-    vector<bool> es_primo(n + 1, true);
-
-    es_primo[0] = es_primo[1] = false;
-    
-    
-    for (int i = 2; i * i <= n; ++i) {
+// Función para calcular números primos usando la criba de Eratóstenes
+void calcular_primos() {
+    es_primo[0] = es_primo[1] = false; // 0 y 1 no son primos
+    for (int i = 2; i <= LIMITE; ++i) {
         if (es_primo[i]) {
-            for (int j = i * i; j <= n; j += i) {
-                es_primo[j] = false;  
+            primos.push_back(i); // Agregar el primo a la lista
+            for (int j = 2 * i; j <= LIMITE; j += i) {
+                es_primo[j] = false;
             }
         }
     }
-
-
-    return es_primo;
 }
 
-
-int main(){
-
-    int n;
-
-    cin >> n;
-    vector<int> tamanos(n);
-
-    for(int i=0;i<n;i++){
-        cin >> tamanos[i];
+// Función para calcular las posiciones perdedoras
+void calcular_posiciones_perdedoras() {
+    vector<bool> dp(LIMITE + 1, false); // dp[i] es true si la posición i es ganadora
+    for (int i = 2; i <= LIMITE; ++i) {
+        bool es_perdedor = true;
+        for (int p : primos) {
+            if (p - 1 > i) break; // No se puede quitar más piedras que las disponibles
+            if (!dp[i - (p - 1)]) { // Hay al menos un movimiento que deja al oponente en posición perdedora
+                es_perdedor = false;
+                break;
+            }
+        }
+        dp[i] = !es_perdedor;
+        if (es_perdedor) {
+            posiciones_perdedoras.insert(i);
+        }
     }
-    cout << endl;
+}
 
-    
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);
 
-    auto numero = max_element(tamanos.begin(),tamanos.end());
+    // Precomputar primos y posiciones perdedoras
+    calcular_primos();
+    calcular_posiciones_perdedoras();
 
-    auto primos=criba(*numero);
-
-
-    for(int i=0;i<n;i++){
-        cout << juego("Alice",tamanos[i],primos) <<endl;
+    // Imprimir las posiciones perdedoras
+    cout << "precomp = {";
+    bool primero = true;
+    for (int p : posiciones_perdedoras) {
+        if (!primero) cout << ", ";
+        cout << p;
+        primero = false;
     }
+    cout << "};" << endl;
 
     return 0;
 }
