@@ -51,8 +51,6 @@ int main() {
                // cout << valores[1] <<" "<<valores[0]<< endl;
                 compra[valores[1]]+=valores[0];
 
-               
-
 
             } else {
                 vector<int> valores;
