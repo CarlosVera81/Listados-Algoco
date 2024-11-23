@@ -38,4 +38,8 @@ int main() {
     }
 
     cout << ans << endl;
+
+    // Complejidad temporal O(nlogn)
+    // Complejidad espacial O(n)
 }
+

@@ -44,15 +44,6 @@ int main() {
         canciones2[i]=splitString(cancion,' ');  
     }
 
-    // cout<< canciones2[2][3] << endl;
-
-//     for(int i=0;i<ncanciones;i++){
-//           for(int j=0;j<int(categorias.size());j++){
-//             cout << canciones2[i][j] << endl;
-//         }
-        
-//     }
-    
     int filtro;
     cin >> filtro;
     cin.ignore();
@@ -68,8 +59,6 @@ int main() {
             }
         }
 
-
-        
         stable_sort(canciones2.begin(),canciones2.end(),[indice](const vector<string>& a,const vector<string>& b){
             return a[indice] < b [indice];
         });
@@ -90,4 +79,8 @@ int main() {
 
 
     return 0;
+
+    // O(f * nlogn)
+    // O(n*x)
 }
+

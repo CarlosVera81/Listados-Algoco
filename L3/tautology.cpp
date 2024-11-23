@@ -105,4 +105,7 @@ int main() {
     cout << (tautology(line) ? "tautology" : "not") << endl;
   }
   return 0;
+  // O(m x n)
+  // O (n)
 }
+

@@ -12,9 +12,6 @@ const ld pi = acos(-1);
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
     cout << fixed << setprecision(9);
-
-    
-
     int n;
     cin >> n;
     
@@ -30,7 +27,6 @@ int main() {
         for(int j=0;j<k;j++){
             
             getline(cin,linea);
-
             string num;
 
             if(linea[2]=='y'){
@@ -50,7 +46,6 @@ int main() {
                 }
                // cout << valores[1] <<" "<<valores[0]<< endl;
                 compra[valores[1]]+=valores[0];
-
 
             } else {
                 vector<int> valores;
@@ -92,9 +87,7 @@ int main() {
                     }
             }
             
-
             string salida="";
-
             if(venta.empty()){
                 salida+="- ";
             } else{
@@ -108,7 +101,6 @@ int main() {
                 salida+=to_string(compra.begin()->first);
                 salida+=" ";
             }
-
             if(last==-1){
                 salida+="-";
             } else {
@@ -117,10 +109,10 @@ int main() {
             cout << salida << endl;
 
         }
-
-
     }
-
-
     return 0;
+
+    // Complejidad temporal: O(n*k log K)
+    // Complejidad espacial: O(K)
+
 }

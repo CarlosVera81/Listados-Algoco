@@ -24,24 +24,19 @@ int main() {
             cin >> nombres[i];
             s.insert(nombres[i]);
         }
-
-
      //   stable_sort(nombres.begin(), nombres.end(), [](const string &a, const string &b) {
    //         return a.substr(0, 2) < b.substr(0, 2); // Compara solo las primeras dos letras
     //    }); // T=O(nlog(n)) ya que usa merge sort
             // E=O(n) arreglo aux sort()
             // E=O(n*l) almacenamiento de la entrada
-
-        
      //   for (const auto &nombre : nombres) {
      //       cout << nombre << endl;
      //   }
-
         for (const auto &nombre : s) {
             cout << nombre << endl;
         }
-
     }
-
     return 0;
+    // Temporal O(casos * k + casos log casos)
+    // Espacial O(casos*k)
 }

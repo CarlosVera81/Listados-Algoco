@@ -109,9 +109,10 @@ int main() {
     }
     return 0;
 
-
-    
-
+    // Complejidad temporal: O(n*(m+k)), donde m es la longitud de 
+    //las operaciones y k el tramaño maximo de la lista inicial;
+    // Complejidad Espacial O(k), por caso de prueba, donde
+    // k es el tamaño de la lista en peor caso.
 
 
 }

@@ -27,10 +27,7 @@ int main() {
     for (int i = 0; i < n; ++i) {
         cin >> lista1[i];
     }
-
-    
     sort(lista1.begin(), lista1.end());
-
 
     while(lista1.size()>=3){
         vector <int> aux ={0,0,0};
@@ -41,8 +38,9 @@ int main() {
         r+=aux[2];
 
     }
-    
     cout<<r<<endl;
-
     return 0;
+
+    // O(n log n)
+    // O(n)
 }

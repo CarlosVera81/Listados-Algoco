@@ -39,7 +39,9 @@ int main() {
             count_levels++;
         }
     }
-
     cout << min_obstacles << " " << count_levels << endl;
     return 0;
+
+    //O(Nlog N + H Log N)
+    // O (N+H)
 }

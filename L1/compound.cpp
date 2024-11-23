@@ -12,7 +12,6 @@ const ld pi = acos(-1);
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
     cout << fixed << setprecision(9);
-
     set<string> palabras;
 
     string input;
@@ -34,9 +33,12 @@ int main() {
 
     }
 
-
     for(auto it=palabras.begin();it!=palabras.end();it++){
         cout << *it << endl;
     }
     return 0;
+    
+
+    // complejidad temporal O(n^2 * L+ n^2 log n)
+    // complejidad espacial O (n^2 * L)
 }

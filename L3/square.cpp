@@ -57,4 +57,8 @@ int main() {
     else {
         cout << "NO" << endl;
     }
+
+    // O(1)
+    // O(1)
 }
+

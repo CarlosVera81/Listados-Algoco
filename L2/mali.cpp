@@ -54,4 +54,9 @@ int main() {
         v2[n2]++;
         cout << calc(v1,v2) << endl;
     }
+
+    // O(n^2)
+    // O(1)
 }
+
+

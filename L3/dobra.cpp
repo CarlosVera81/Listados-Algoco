@@ -81,4 +81,7 @@ int main() {
 	solve(0);
 	cout << ans;
 	return 0;
+
+	// O(3^k * n)
+	// O(n)
 }

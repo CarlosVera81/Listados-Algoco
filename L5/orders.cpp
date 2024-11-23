@@ -41,7 +41,6 @@ void solveOrder(int s) {
             result.push_back(item + 1);  // Store 1-based index of the item
             current -= c[item];
         }
-
         // Print the result in ascending order
         sort(result.begin(), result.end());
         for (int idx : result) {
@@ -50,25 +49,22 @@ void solveOrder(int s) {
         printf("\n");
     }
 }
-
 int main() {
     // Input: number of items on the menu
     scanf("%d", &n);
-
     // Input: cost of each item
     for (int i = 0; i < n; i++) {
         scanf("%d", &c[i]);
     }
-
     // Input: number of orders
     scanf("%d", &m);
-
     // Process each order
     for (int i = 0; i < m; i++) {
         int s;
         scanf("%d", &s);
         solveOrder(s);  // Solve for the current order total
     }
-
     return 0;
+    // O(m x n x s)
+    // O(s + n)
 }

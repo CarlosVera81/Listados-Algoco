@@ -84,4 +84,8 @@ int main() {
     while(cases--) {
         solve();
     }
+
+    // O(n * n!)
+    // O(n^2)
+
 }

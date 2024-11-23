@@ -63,6 +63,8 @@ int main() {
 
       //  cout << matriz[obj][capacidad]<<endl;
     }
-    
      return 0;
+     // O(obj x capacidad)
+     // O(obj x capacidad)
 }
+

@@ -24,4 +24,9 @@ int main() {
     }
 
     cout << endl;
+
+    //O(n)
+    // O(1)
 }
+
+

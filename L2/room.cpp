@@ -28,7 +28,6 @@ int main() {
     }
 
     sort(tamanios.begin(),tamanios.end());
-
     ll litros=0;
 
     for(int i=0;i<m;i++){
@@ -42,4 +41,6 @@ int main() {
     cout << litros << endl;
 
     return 0;
+    // O(nlog + m x n)
+    // O(n+m)
 }

@@ -47,10 +47,6 @@ void file() {
     if(!a || !b) cout << "uh oh" << endl;
 }
 
-
-
-
-
 struct event {
     int start, end;
 };
@@ -66,12 +62,10 @@ bool cmp(event& e1, event& e2) {
 }
 
 int main() {
-    //file();
+    
     fast();
-
     int n, m;
     cin >> n >> m;
-
     vector<event> v(n);
     for(auto& i : v) {
         cin >> i.start;
@@ -79,9 +73,7 @@ int main() {
         cin >> t;
         i.end = i.start + t;
     }
-
     sort(all(v), cmp);
-
     multiset<int> endtimes;
     int saves = 0;
     for(auto i : v) {
@@ -92,8 +84,8 @@ int main() {
         }
         endtimes.insert(i.end);
     }
-
     cout << saves << endl;
-
     return 0;
+    // O(nlogn)
+    // O(n)
 }

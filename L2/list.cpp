@@ -12,8 +12,6 @@ const ld pi = acos(-1);
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
     cout << fixed << setprecision(9);
-
-
     int n;
     while(cin>>n){
         if (n==0){
@@ -44,10 +42,10 @@ int main() {
         for(int i=0;i<n;i++){
             cout << dic[lista1copia[i]] << endl;
         }
-
         cout << endl;
-
     }
-
     return 0;
+    // O(nlogn)
+    // O(n)
 }
+

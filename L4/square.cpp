@@ -9,39 +9,30 @@ const ll mod = 1e9 + 7;
 const ll inf = 1e12;
 const ld pi = acos(-1);
 
-
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
     cout << fixed << setprecision(9);
 
-
     int n,m,k;
     ll r=0;
-
     cin >> n >> m >> k;
-
     int entrada;
 
     priority_queue <int,vector<int>,greater<int>> q1;
     priority_queue <int,vector<int>,greater<int>> q2;
     priority_queue <int,vector<int>,greater<int>> q3;
-
     for(int i=0;i<n;i++){
         cin >> entrada;
         q1.push(entrada);
     }
-
     for(int i=0;i<m;i++){
         cin >> entrada;
         q2.push(entrada);
     }
-
     for(int i=0;i<k;i++){
         cin >> entrada;
         q3.push(entrada);
     }
-
-    
     while(true){
         if (q1.empty()){
             break;
@@ -60,8 +51,9 @@ int main() {
             }
         }
     }
-
     cout << r << endl;
     return 0;
+    // O((n+m+k)log max(n,m,k))
+    // O( n + m + k)
 }
 
